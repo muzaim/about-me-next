@@ -1,16 +1,16 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
-import "@/components/header/header.css";
-import "@/components/home/home.css";
-import "@/components/about/about.css";
-import "@/components/skills/skill.css";
-import "@/components/services/service.css";
-import "@/components/qualification/qualification.css";
-import "@/components/work/work.css";
-import "@/components/contact/contact.css";
-import "@/components/footer/footer.css";
-import "@/components/scrollup/scrollup.css";
+import "../components/header/header.css";
+import "../components/home/home.css";
+import "../components/about/about.css";
+import "../components/skills/skill.css";
+import "../components/services/service.css";
+import "../components/qualification/qualification.css";
+import "../components/work/work.css";
+import "../components/contact/contact.css";
+import "../components/footer/footer.css";
+import "../components/scrollup/scrollup.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://syafrisurya.com";
 const title = "Syafri Surya | Fullstack Developer";

@@ -369,6 +369,17 @@ body.dark-theme .intro-screen {
   white-space: nowrap;
 }
 
+.intro-screen__title-text::after {
+  content: "";
+  display: inline-block;
+  width: 0.08em;
+  height: 0.88em;
+  margin-left: 0.08em;
+  background-color: var(--title-color);
+  transform: translateY(0.08em);
+  animation: introCursorBlink 0.85s steps(2, start) infinite;
+}
+
 .intro-screen__subtitle {
   margin-top: 1.5rem;
   color: var(--text-color);
@@ -390,6 +401,12 @@ body.dark-theme .intro-screen {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
+  }
+}
+
+@keyframes introCursorBlink {
+  50% {
+    opacity: 0;
   }
 }
 
@@ -439,6 +456,7 @@ body.dark-theme .reveal-card:hover {
   .intro-screen__eyebrow,
   .intro-screen__title,
   .intro-screen__title-text,
+  .intro-screen__title-text::after,
   .intro-screen__subtitle,
   [data-aos="card-reveal"],
   [data-aos="card-reveal"].aos-animate,

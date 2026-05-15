@@ -1,6 +1,7 @@
 "use client";
 
 import { LazyMotion, domAnimation, m } from "framer-motion";
+import Lenis from "lenis";
 import { useEffect, useState } from "react";
 import About from "./about/About";
 import Contact from "./contact/Contact";
@@ -15,11 +16,13 @@ import Skills from "./skills/Skills";
 import Work from "./work/Work";
 
 const introDuration = 3900;
+const introName = "Syafri Surya";
 
 export default function PortfolioShell() {
 	const [theme, setTheme] = useState<"dark" | "light">("light");
 	const [showIntro, setShowIntro] = useState(true);
 	const [isIntroClosing, setIsIntroClosing] = useState(false);
+	const [typedName, setTypedName] = useState("");
 
 	useEffect(() => {
 		const savedTheme = window.localStorage.getItem("theme");
@@ -28,7 +31,11 @@ export default function PortfolioShell() {
 			? "dark"
 			: "light";
 
-		setTheme(savedTheme === "dark" || savedTheme === "light" ? savedTheme : preferredTheme);
+		setTheme(
+			savedTheme === "dark" || savedTheme === "light"
+				? savedTheme
+				: preferredTheme
+		);
 	}, []);
 
 	useEffect(() => {
@@ -52,6 +59,24 @@ export default function PortfolioShell() {
 	}, []);
 
 	useEffect(() => {
+		if (!showIntro) return undefined;
+
+		setTypedName("");
+
+		let index = 0;
+		const typeTimer = window.setInterval(() => {
+			index += 1;
+			setTypedName(introName.slice(0, index));
+
+			if (index >= introName.length) {
+				window.clearInterval(typeTimer);
+			}
+		}, 95);
+
+		return () => window.clearInterval(typeTimer);
+	}, [showIntro]);
+
+	useEffect(() => {
 		document.body.classList.toggle("intro-active", showIntro);
 
 		return () => {
@@ -68,7 +93,9 @@ export default function PortfolioShell() {
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						const delay = Number(entry.target.getAttribute("data-aos-delay") ?? 0);
+						const delay = Number(
+							entry.target.getAttribute("data-aos-delay") ?? 0
+						);
 						window.setTimeout(() => {
 							entry.target.classList.add("aos-animate");
 						}, delay);
@@ -85,21 +112,31 @@ export default function PortfolioShell() {
 	}, [showIntro]);
 
 	useEffect(() => {
-		let frameId = 0;
-		let current = window.scrollY;
+		const lenis = new Lenis({
+			duration: 1.1,
+			smoothWheel: true,
+			syncTouch: false,
+		});
 
-		const smoothScroll = () => {
-			current += (window.scrollY - current) * 0.12;
-			frameId = window.requestAnimationFrame(smoothScroll);
+		let animationFrameId = 0;
+
+		const raf = (time: number) => {
+			lenis.raf(time);
+			animationFrameId = window.requestAnimationFrame(raf);
 		};
 
-		frameId = window.requestAnimationFrame(smoothScroll);
+		animationFrameId = window.requestAnimationFrame(raf);
 
-		return () => window.cancelAnimationFrame(frameId);
+		return () => {
+			window.cancelAnimationFrame(animationFrameId);
+			lenis.destroy();
+		};
 	}, []);
 
 	const toggleTheme = () => {
-		setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
+		setTheme((currentTheme) =>
+			currentTheme === "dark" ? "light" : "dark"
+		);
 	};
 
 	return (
@@ -107,7 +144,9 @@ export default function PortfolioShell() {
 			<CustomCursor />
 			{showIntro && (
 				<m.div
-					className={`intro-screen ${isIntroClosing ? "intro-screen--exit" : ""}`}
+					className={`intro-screen ${
+						isIntroClosing ? "intro-screen--exit" : ""
+					}`}
 					aria-live="polite"
 					initial={{ opacity: 1 }}
 					animate={{ opacity: isIntroClosing ? 0 : 1 }}
@@ -123,7 +162,9 @@ export default function PortfolioShell() {
 							Personal Portfolio
 						</m.p>
 						<h1 className="intro-screen__title">
-							<span className="intro-screen__title-text">Syafri Surya</span>
+							<span className="intro-screen__title-text">
+								{typedName}
+							</span>
 						</h1>
 						<m.p
 							className="intro-screen__subtitle"
