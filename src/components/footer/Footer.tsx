@@ -10,7 +10,7 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="footer__container container">
-				<h1 className="footer__title">Surya</h1>
+				<p className="footer__title">Surya</p>
 
 				<ul className="footer__list">
 					<li>

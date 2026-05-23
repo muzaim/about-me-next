@@ -15,7 +15,23 @@ import "../components/scrollup/scrollup.css";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://syafrisurya.com";
 const title = "Syafri Surya | Fullstack Developer";
 const description =
-	"Portfolio of Syafri Surya, a fullstack developer building modern web and mobile experiences with React, Next.js, Vue, Golang, Laravel, and thoughtful UI/UX.";
+	"Explore Syafri Surya's fullstack developer portfolio: Next.js, React, Vue, Golang, Laravel, UI/UX work, professional projects, services, and contact details.";
+const profileImage = "/assets/about1.jpg";
+const sameAs = [
+	"https://github.com/muzaim",
+	"https://www.linkedin.com/in/syafri-surya-574369207/",
+	"https://www.upwork.com/freelancers/~01efa129667ae9e3f3",
+];
+const skills = [
+	"Next.js",
+	"React",
+	"Vue.js",
+	"Golang",
+	"Laravel",
+	"UI/UX Design",
+	"Frontend Development",
+	"Backend Development",
+];
 
 export const metadata: Metadata = {
 	metadataBase: new URL(siteUrl),
@@ -31,11 +47,15 @@ export const metadata: Metadata = {
 	keywords: [
 		"Syafri Surya",
 		"Fullstack Developer",
+		"Fullstack Developer Indonesia",
 		"Frontend Developer",
+		"Backend Developer",
 		"Next.js Developer",
 		"React Developer",
 		"Vue Developer",
 		"Golang Developer",
+		"Laravel Developer",
+		"UI/UX Designer",
 		"Portfolio",
 	],
 	openGraph: {
@@ -44,9 +64,10 @@ export const metadata: Metadata = {
 		title,
 		description,
 		siteName: "Syafri Surya Portfolio",
+		locale: "en_US",
 		images: [
 			{
-				url: "/assets/about1.jpg",
+				url: profileImage,
 				width: 1200,
 				height: 630,
 				alt: "Syafri Surya portfolio portrait",
@@ -57,7 +78,8 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title,
 		description,
-		images: ["/assets/about1.jpg"],
+		creator: "@muzaim",
+		images: [profileImage],
 	},
 	icons: {
 		icon: "/hand.svg",
@@ -125,24 +147,48 @@ export default function RootLayout({
 				>
 					{JSON.stringify({
 						"@context": "https://schema.org",
-						"@type": "Person",
-						name: "Syafri Surya",
-						url: siteUrl,
-						jobTitle: "Fullstack Developer",
-						email: "mailto:muzaimsurya16@gmail.com",
-						telephone: "+62-822-5778-7559",
-						sameAs: [
-							"https://github.com/muzaim",
-							"https://www.linkedin.com/in/syafri-surya-574369207/",
-							"https://www.upwork.com/freelancers/~01efa129667ae9e3f3",
-						],
-						knowsAbout: [
-							"Next.js",
-							"React",
-							"Vue.js",
-							"Golang",
-							"Laravel",
-							"UI/UX Design",
+						"@graph": [
+							{
+								"@type": "Person",
+								"@id": `${siteUrl}/#person`,
+								name: "Syafri Surya",
+								url: siteUrl,
+								image: `${siteUrl}${profileImage}`,
+								jobTitle: "Fullstack Developer",
+								email: "mailto:muzaimsurya16@gmail.com",
+								telephone: "+62-822-5778-7559",
+								sameAs,
+								knowsAbout: skills,
+								worksFor: {
+									"@type": "Organization",
+									name: "PT. Sarana Multigriya Finansial (Persero)",
+								},
+							},
+							{
+								"@type": "WebSite",
+								"@id": `${siteUrl}/#website`,
+								url: siteUrl,
+								name: "Syafri Surya Portfolio",
+								description,
+								inLanguage: "en",
+								publisher: {
+									"@id": `${siteUrl}/#person`,
+								},
+							},
+							{
+								"@type": "ProfilePage",
+								"@id": `${siteUrl}/#profilepage`,
+								url: siteUrl,
+								name: title,
+								description,
+								inLanguage: "en",
+								isPartOf: {
+									"@id": `${siteUrl}/#website`,
+								},
+								mainEntity: {
+									"@id": `${siteUrl}/#person`,
+								},
+							},
 						],
 					})}
 				</Script>

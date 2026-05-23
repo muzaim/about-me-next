@@ -161,11 +161,11 @@ export default function PortfolioShell() {
 						>
 							Personal Portfolio
 						</m.p>
-						<h1 className="intro-screen__title">
+						<p className="intro-screen__title" aria-hidden="true">
 							<span className="intro-screen__title-text">
 								{typedName}
 							</span>
-						</h1>
+						</p>
 						<m.p
 							className="intro-screen__subtitle"
 							initial={{ opacity: 0, y: 16 }}
