@@ -1,25 +1,21 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { projectsData, projectNav, type ProjectCategory, type ProjectItem } from "./Data";
 import WorksItems from "./WorksItems";
 
 const Works = () => {
-	const [item, setItem] = useState({
-		category: projectNav[0].category,
-	});
-	const [projects, setProjects] = useState<ProjectItem[]>([]);
+	const [activeCategory, setActiveCategory] = useState<ProjectCategory>(
+		projectNav[0].category
+	);
 	const [active, setActive] = useState(0);
 	const [isSwitching, setIsSwitching] = useState(false);
 	const switchTimer = useRef<number | null>(null);
 	const revealTimer = useRef<number | null>(null);
 
-	useEffect(() => {
-		const newProjects = projectsData.filter((project) => {
-			return project.category === item.category;
-		});
-		setProjects(newProjects);
-	}, [item]);
+	const projects = useMemo<ProjectItem[]>(() => {
+		return projectsData.filter((project) => project.category === activeCategory);
+	}, [activeCategory]);
 
 	useEffect(() => {
 		return () => {
@@ -28,16 +24,32 @@ const Works = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		const animationFrameId = window.requestAnimationFrame(() => {
+			document
+				.querySelectorAll<HTMLElement>(".work__container [data-aos]")
+				.forEach((element) => {
+					const delay = Number(element.getAttribute("data-aos-delay") ?? 0);
+
+					window.setTimeout(() => {
+						element.classList.add("aos-animate");
+					}, delay);
+				});
+		});
+
+		return () => window.cancelAnimationFrame(animationFrameId);
+	}, [projects]);
+
 	const handleClick = (category: ProjectCategory, index: number) => {
-		if (category === item.category || isSwitching) {
+		if (category === activeCategory || isSwitching) {
 			return;
 		}
 
+		setActive(index);
 		setIsSwitching(true);
 
 		switchTimer.current = window.setTimeout(() => {
-			setItem({ category });
-			setActive(index);
+			setActiveCategory(category);
 
 			revealTimer.current = window.setTimeout(() => {
 				setIsSwitching(false);
@@ -57,8 +69,7 @@ const Works = () => {
 							className={`${
 								active === index ? "active-work" : ""
 							} work__item `}
-							key={index}
-							data-aos="fade-up"
+							key={item.category}
 						>
 							{item.name}
 						</span>
@@ -68,7 +79,7 @@ const Works = () => {
 
 			<div
 				className={`work__container ${
-					item.category === "professional"
+					activeCategory === "professional"
 						? "work__container--professional"
 						: ""
 				} ${
