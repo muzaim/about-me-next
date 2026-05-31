@@ -16,7 +16,7 @@ import "../components/scrollup/scrollup.css";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://syafrisurya.com";
 const title = "Syafri Surya | Fullstack Developer";
 const description =
-	"Explore Syafri Surya's fullstack developer portfolio: Next.js, React, Vue, Golang, Laravel, UI/UX work, professional projects, services, and contact details.";
+	"Fullstack Developer specializing in Next.js, React.js, Laravel, NestJS, and Golang. Building scalable web applications, SaaS platforms, and enterprise solutions.";
 const profileImage = "/assets/og.jpg";
 const iconImage = "/assets/senyum-icon.png";
 const sameAs = [
