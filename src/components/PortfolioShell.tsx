@@ -113,8 +113,10 @@ export default function PortfolioShell() {
 
 	useEffect(() => {
 		const lenis = new Lenis({
-			duration: 1.1,
+			anchors: true,
+			lerp: 0.075,
 			smoothWheel: true,
+			wheelMultiplier: 0.75,
 			syncTouch: false,
 		});
 

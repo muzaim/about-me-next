@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 import "../components/header/header.css";
 import "../components/home/home.css";
@@ -84,6 +85,9 @@ export const metadata: Metadata = {
 	icons: {
 		icon: "/hand.svg",
 		apple: "/hand.svg",
+	},
+	verification: {
+		google: "_KReqKF8ee-NdEi93vn6VRVJ89JTl33aPpF51qPjHLA",
 	},
 	robots: {
 		index: true,
