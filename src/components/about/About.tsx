@@ -8,7 +8,7 @@ const About = () => {
 			<span className="section__subtitle">My Introduction</span>
 			<div className="about__container container grid">
 				<Image
-					src="/assets/about.jpeg"
+					src="/assets/senyum.png"
 					alt="Syafri Surya"
 					width={350}
 					height={350}
