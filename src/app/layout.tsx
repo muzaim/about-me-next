@@ -18,7 +18,6 @@ const title = "Syafri Surya | Fullstack Developer";
 const description =
 	"Fullstack Developer specializing in Next.js, React.js, Laravel, NestJS, and Golang. Building scalable web applications, SaaS platforms, and enterprise solutions.";
 const profileImage = "/assets/og.jpg";
-const iconImage = "/assets/senyum-icon.png";
 const sameAs = [
 	"https://github.com/muzaim",
 	"https://www.linkedin.com/in/syafri-surya/",
@@ -84,20 +83,8 @@ export const metadata: Metadata = {
 		images: [profileImage],
 	},
 	icons: {
-		icon: [
-			{
-				url: iconImage,
-				sizes: "512x512",
-				type: "image/png",
-			},
-		],
-		apple: [
-			{
-				url: iconImage,
-				sizes: "512x512",
-				type: "image/png",
-			},
-		],
+		icon: "/hand.svg",
+		apple: "/hand.svg",
 	},
 	verification: {
 		google: "_KReqKF8ee-NdEi93vn6VRVJ89JTl33aPpF51qPjHLA",
