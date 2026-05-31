@@ -17,10 +17,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://syafrisurya.com";
 const title = "Syafri Surya | Fullstack Developer";
 const description =
 	"Explore Syafri Surya's fullstack developer portfolio: Next.js, React, Vue, Golang, Laravel, UI/UX work, professional projects, services, and contact details.";
-const profileImage = "/assets/about1.jpg";
+const profileImage = "/assets/senyum.png";
 const sameAs = [
 	"https://github.com/muzaim",
-	"https://www.linkedin.com/in/syafri-surya-574369207/",
+	"https://www.linkedin.com/in/syafri-surya/",
 	"https://www.upwork.com/freelancers/~01efa129667ae9e3f3",
 ];
 const skills = [
