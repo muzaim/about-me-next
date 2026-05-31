@@ -12,17 +12,12 @@ export default function manifest(): MetadataRoute.Manifest {
 		theme_color: "#0b0f19",
 		icons: [
 			{
-				src: "/hand.svg",
-				sizes: "any",
-				type: "image/svg+xml",
-			},
-			{
-				src: "/logo192.png",
+				src: "/assets/senyum-icon-192.png",
 				sizes: "192x192",
 				type: "image/png",
 			},
 			{
-				src: "/logo512.png",
+				src: "/assets/senyum-icon.png",
 				sizes: "512x512",
 				type: "image/png",
 			},

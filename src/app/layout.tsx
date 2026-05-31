@@ -17,7 +17,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://syafrisurya.com";
 const title = "Syafri Surya | Fullstack Developer";
 const description =
 	"Explore Syafri Surya's fullstack developer portfolio: Next.js, React, Vue, Golang, Laravel, UI/UX work, professional projects, services, and contact details.";
-const profileImage = "/assets/og.jpeg";
+const profileImage = "/assets/og.jpg";
+const iconImage = "/assets/senyum-icon.png";
 const sameAs = [
 	"https://github.com/muzaim",
 	"https://www.linkedin.com/in/syafri-surya/",
@@ -83,8 +84,20 @@ export const metadata: Metadata = {
 		images: [profileImage],
 	},
 	icons: {
-		icon: "/hand.svg",
-		apple: "/hand.svg",
+		icon: [
+			{
+				url: iconImage,
+				sizes: "512x512",
+				type: "image/png",
+			},
+		],
+		apple: [
+			{
+				url: iconImage,
+				sizes: "512x512",
+				type: "image/png",
+			},
+		],
 	},
 	verification: {
 		google: "_KReqKF8ee-NdEi93vn6VRVJ89JTl33aPpF51qPjHLA",
