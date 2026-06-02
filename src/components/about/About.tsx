@@ -18,10 +18,11 @@ const About = () => {
 				<div className="about__data" data-aos="fade-up">
 					<Info />
 					<p className="about__description">
-							I do programming fulltime, since I&apos;m a &quot;career changer&quot;,
-						I always keen to learning deep into the fundamentals of
-						the web development and moving forward as a freelancer
-						with the lastes technologies required work to it.
+						Every project begins with uncertainty. There are
+						questions to answer, problems to solve, and countless
+						decisions waiting to be made. I enjoy navigating that
+						process, turning ambiguity into clarity and ideas into
+						products that people can rely on.
 					</p>
 					<a
 						href="/assets/cv_syafri_surya.pdf"

@@ -14,9 +14,10 @@ import "../components/footer/footer.css";
 import "../components/scrollup/scrollup.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://syafrisurya.com";
-const title = "Syafri Surya | Fullstack Developer";
+const title =
+	"Syafri Surya — Fullstack Engineer | Next.js, React.js, Laravel, NestJS & Golang Developer";
 const description =
-	"Fullstack Developer specializing in Next.js, React.js, Laravel, NestJS, and Golang. Building scalable web applications, SaaS platforms, and enterprise solutions.";
+	"Fullstack Engineer specializing in Next.js, React.js, Laravel, NestJS, and Golang. Building scalable web applications, SaaS platforms, and enterprise solutions.";
 const profileImage = "/assets/og.jpg";
 const sameAs = [
 	"https://github.com/muzaim",
@@ -46,18 +47,80 @@ export const metadata: Metadata = {
 		canonical: "/",
 	},
 	keywords: [
+		// Personal Brand
 		"Syafri Surya",
+		"Syafri Surya Portfolio",
+		"Syafri Surya Fullstack Engineer",
+
+		// Main Roles
+		"Fullstack Engineer",
+		"Full Stack Developer",
 		"Fullstack Developer",
-		"Fullstack Developer Indonesia",
+		"Software Engineer",
+		"Web Developer",
+		"Web Application Developer",
+		"Product Engineer",
+
+		// Location Based
+		"Fullstack Engineer Indonesia",
+		"Full Stack Developer Indonesia",
+		"Software Engineer Indonesia",
+		"Web Developer Indonesia",
+		"Freelance Developer Indonesia",
+
+		// Frontend
+		"Frontend Engineer",
 		"Frontend Developer",
-		"Backend Developer",
-		"Next.js Developer",
 		"React Developer",
+		"React.js Developer",
+		"Next.js Developer",
 		"Vue Developer",
+		"Vue.js Developer",
+		"JavaScript Developer",
+		"TypeScript Developer",
+		"Tailwind CSS Developer",
+
+		// Backend
+		"Backend Engineer",
+		"Backend Developer",
 		"Golang Developer",
+		"Go Developer",
 		"Laravel Developer",
-		"UI/UX Designer",
-		"Portfolio",
+		"PHP Developer",
+		"REST API Developer",
+		"API Developer",
+
+		// Fullstack Tech
+		"Next.js and Golang Developer",
+		"Vue.js and Golang Developer",
+		"Laravel and Vue Developer",
+		"Fullstack JavaScript Developer",
+		"Fullstack Golang Developer",
+
+		// Services
+		"Custom Web Development",
+		"Web Application Development",
+		"Frontend Development Services",
+		"Backend Development Services",
+		"Product Development",
+		"SaaS Development",
+		"Business Application Development",
+
+		// Portfolio
+		"Developer Portfolio",
+		"Software Engineer Portfolio",
+		"Fullstack Portfolio",
+		"Frontend Portfolio",
+		"Backend Portfolio",
+		"Web Developer Portfolio",
+
+		// Hiring Intent
+		"Hire Fullstack Developer",
+		"Hire React Developer",
+		"Hire Next.js Developer",
+		"Hire Golang Developer",
+		"Freelance Fullstack Developer",
+		"Freelance Software Engineer",
 	],
 	openGraph: {
 		type: "website",
@@ -158,7 +221,7 @@ export default function RootLayout({
 								name: "Syafri Surya",
 								url: siteUrl,
 								image: `${siteUrl}${profileImage}`,
-								jobTitle: "Fullstack Developer",
+								jobTitle: "Fullstack Engineer",
 								email: "mailto:muzaimsurya16@gmail.com",
 								telephone: "+62-822-5778-7559",
 								sameAs,

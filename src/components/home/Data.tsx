@@ -55,11 +55,12 @@ const Data = () => {
 					></path>
 				</svg>
 			</h1>
-			<h3 className="home__subtitle">Fullstack Developer</h3>
+			<h3 className="home__subtitle">Fullstack Engineer</h3>
 			<p className="home__description">
-				I build stuff for the web and mobile, and I care a lot about how
-				things look and feel. Whether it’s a website, an app, or a clean
-				UI/UX design. My goal is always the same:{" "}
+				Some people build what users see. Others build what users never
+				see. I&apos;m obsessed with everything in between. From the
+				first pixel users touch to the last query running behind the
+				scenes. My goal is always the same:{" "}
 				<b>make it work beautifully and fun to use.</b>
 			</p>
 

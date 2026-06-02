@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
 		name: "Syafri Surya Portfolio",
 		short_name: "Surya",
 		description:
-			"Portfolio of Syafri Surya, fullstack developer for web, mobile, and UI/UX experiences.",
+			"Portfolio of Syafri Surya, Fullstack Engineer for web, mobile, and UI/UX experiences.",
 		start_url: "/",
 		display: "standalone",
 		background_color: "#ffffff",

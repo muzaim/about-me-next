@@ -7,7 +7,7 @@ const Frontend = () => {
 			data-aos="card-reveal"
 			data-aos-delay="0"
 		>
-			<h3 className="skills__title">Frontend Development</h3>
+			<h3 className="skills__title">Frontend Frameworks</h3>
 			<div className="skills__box">
 				<div className="skills__group">
 					<div className="skills__data">

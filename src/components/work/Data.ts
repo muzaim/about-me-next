@@ -108,9 +108,11 @@ export const projectsData: ProjectItem[] = [
 		duration: "Jan 2026 - Present",
 		tools: "Golang, NextJS",
 		responsibilities: [
-			"Built a Market Risk Profiling System for SMF, centralizing portfolio exposure analysis and eliminating manual risk assessment processes.",
-			"Implemented backend logic for risk scoring, volatility analysis, and automated reporting to enable faster and more accurate decision making.",
-			"Enhanced efficiency, compliance, and transparency by delivering a scalable and secure risk management platform.",
+			"Built a Market Risk Profiling System that gives analysts a centralized view of portfolio exposure, making it easier to identify potential risks without relying on scattered reports and spreadsheets.",
+			"Worked on risk scoring and volatility calculations to help teams evaluate portfolio performance through a more consistent and data-driven approach.",
+			"Implemented automated reporting features that significantly reduced repetitive manual work during risk assessment and review processes.",
+			"Collaborated with risk management stakeholders to translate business requirements into workflows that could be easily adopted by analysts.",
+			"Designed and maintained backend services responsible for processing portfolio data, ensuring reports remained accurate and up to date.",
 		],
 	},
 	{
@@ -124,9 +126,10 @@ export const projectsData: ProjectItem[] = [
 		duration: "Dec 2024 - Aug 2025",
 		tools: "Golang, VueJS",
 		responsibilities: [
-			"Built the frontend for a Risk Register System, centralizing risk assessment and monitoring processes across multiple risk events.",
-			"Designed interactive risk scoring, impact-likelihood evaluation, and visual categorization features to improve usability and decision clarity.",
-			"Improved risk visibility and mitigation tracking by enabling RCSA teams to efficiently manage and monitor risk actions within a single platform.",
+			"Built the frontend for a Risk Register platform used to manage risk events, mitigation plans, and monitoring activities across different business units.",
+			"Created intuitive assessment flows that allowed users to evaluate risks based on impact, likelihood, and overall risk levels.",
+			"Worked closely with business users to simplify complex risk management processes into a more structured and user-friendly experience.",
+			"Added visual indicators and categorization features that helped teams quickly identify high-priority risks and ongoing mitigation efforts.",
 		],
 	},
 	{
@@ -140,9 +143,11 @@ export const projectsData: ProjectItem[] = [
 		duration: "Aug 2024 - May 2025",
 		tools: "Golang, NextJS",
 		responsibilities: [
-			"Built the frontend for a Loan Origination System, centralizing loan application and credit evaluation processes based on comprehensive risk parameters.",
-			"Implemented features for eligibility assessment and automated credit limit calculation using financial data and risk scoring models.",
-			"Enhanced decision-making and user transparency through interactive workflows and real-time tracking dashboards, ensuring seamless integration with backend services.",
+			"Built the frontend for a Loan Origination System that supports the entire loan submission and evaluation process from application to approval.",
+			"Implemented eligibility checks and credit limit calculations based on financial indicators and predefined risk parameters.",
+			"Created dashboards and tracking features that gave users better visibility into application status and approval progress.",
+			"Worked closely with backend teams to integrate multiple services and ensure data remained synchronized throughout the workflow.",
+			"Helped streamline credit evaluation activities by reducing manual verification steps and improving information accessibility.",
 		],
 	},
 	{
@@ -156,9 +161,11 @@ export const projectsData: ProjectItem[] = [
 		duration: "March 2022 - Jan 2023",
 		tools: "Golang, VueJS",
 		responsibilities: [
-			"Built a Procurement System to centralize and digitalize procurement processes, eliminating manual workflows from requisition to vendor selection.",
-			"Implemented key functionalities for purchase requests, approval flows, and vendor management integrated with budgeting systems.",
-			"Enhanced system performance and maintainability by optimizing frontend rendering, introducing efficient caching, and refactoring reusable components.",
+			"Built a Procurement System that centralized procurement activities, replacing manual processes with a structured digital workflow.",
+			"Implemented purchase request submissions, approval chains, and vendor management features to support day-to-day procurement operations.",
+			"Improved application performance by optimizing frontend rendering and reducing unnecessary data requests across frequently used modules.",
+			"Refactored reusable components and shared functionality to make future feature development faster and easier to maintain.",
+			"Helped procurement teams gain better visibility into request statuses, approvals, and vendor-related activities through a single platform.",
 		],
 	},
 	{
@@ -172,9 +179,10 @@ export const projectsData: ProjectItem[] = [
 		duration: "July 2021 - Feb 2022",
 		tools: "Laravel",
 		responsibilities: [
-			"Built and maintained Redberries, a centralized recruitment platform for Astra Credit Companies, streamlining job postings and candidate application processes within a single system.",
-			"Designed scalable backend architecture, database structures, and API integrations to ensure reliable and efficient recruitment operations.",
-			"Enhanced recruitment efficiency by automating workflows, improving candidate tracking, and reducing manual coordination across teams.",
+			"Built and maintained Redberries, an internal recruitment platform used to manage job postings, candidate applications, and recruitment activities within Astra Credit Companies.",
+			"Worked on backend development, database design, and system integrations that supported recruitment workflows across multiple teams.",
+			"Added features that simplified candidate tracking and reduced the need for manual coordination between recruiters and hiring managers.",
+			"Collaborated with stakeholders to improve recruitment processes and translate operational needs into practical system features.",
 		],
 	},
 	{
@@ -188,9 +196,11 @@ export const projectsData: ProjectItem[] = [
 		duration: "July 2021 - July 2023",
 		tools: "Laravel",
 		responsibilities: [
-			"Developed ACC Gasfin, a centralized internal platform for managing operational policies and governance processes, eliminating fragmented and manual document handling.",
-			"Built responsive interfaces for document tracking, version control, and compliance monitoring, improving accessibility and usability.",
-			"Enhanced efficiency, consistency, and compliance visibility by delivering a secure, scalable, and performance-optimized system.",
+			"Built an internal platform used to manage company policies, governance documents, and operational procedures in a more organized and accessible way.",
+			"Developed document tracking, version history, and approval workflows that helped teams manage policy changes more efficiently.",
+			"Helped centralize documents that were previously scattered across different storage locations and communication channels.",
+			"Improved usability and performance across key modules, making the platform easier to adopt for day-to-day operational activities.",
+			"Supported governance and compliance efforts by providing better visibility into document ownership, updates, and approval statuses.",
 		],
 	},
 ];
