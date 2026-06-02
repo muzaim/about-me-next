@@ -15,9 +15,9 @@ import "../components/scrollup/scrollup.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://syafrisurya.com";
 const title =
-	"Syafri Surya — Fullstack Engineer | Next.js, React.js, Laravel, NestJS & Golang Developer";
+	"Syafri Surya — Full Stack Engineer | Next.js, React.js, Laravel, NestJS & Golang Developer";
 const description =
-	"Fullstack Engineer specializing in Next.js, React.js, Laravel, NestJS, and Golang. Building scalable web applications, SaaS platforms, and enterprise solutions.";
+	"Full Stack Engineer specializing in Next.js, React.js, Laravel, NestJS, and Golang. Building scalable web applications, SaaS platforms, and enterprise solutions.";
 const profileImage = "/assets/og.jpg";
 const sameAs = [
 	"https://github.com/muzaim",
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
 		// Personal Brand
 		"Syafri Surya",
 		"Syafri Surya Portfolio",
-		"Syafri Surya Fullstack Engineer",
+		"Syafri Surya Full Stack Engineer",
 
 		// Main Roles
-		"Fullstack Engineer",
+		"Full Stack Engineer",
 		"Full Stack Developer",
 		"Fullstack Developer",
 		"Software Engineer",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 		"Product Engineer",
 
 		// Location Based
-		"Fullstack Engineer Indonesia",
+		"Full Stack Engineer Indonesia",
 		"Full Stack Developer Indonesia",
 		"Software Engineer Indonesia",
 		"Web Developer Indonesia",
@@ -221,7 +221,7 @@ export default function RootLayout({
 								name: "Syafri Surya",
 								url: siteUrl,
 								image: `${siteUrl}${profileImage}`,
-								jobTitle: "Fullstack Engineer",
+								jobTitle: "Full Stack Engineer",
 								email: "mailto:muzaimsurya16@gmail.com",
 								telephone: "+62-822-5778-7559",
 								sameAs,

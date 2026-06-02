@@ -174,7 +174,7 @@ export default function PortfolioShell() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 2.2 }}
 						>
-							Fullstack Engineer
+							Full Stack Engineer
 						</m.p>
 					</div>
 				</m.div>

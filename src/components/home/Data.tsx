@@ -55,7 +55,7 @@ const Data = () => {
 					></path>
 				</svg>
 			</h1>
-			<h3 className="home__subtitle">Fullstack Engineer</h3>
+			<h3 className="home__subtitle">Full Stack Engineer</h3>
 			<p className="home__description">
 				Some people build what users see. Others build what users never
 				see. I&apos;m obsessed with everything in between. From the

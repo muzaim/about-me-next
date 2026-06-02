@@ -56,7 +56,7 @@ const Qualification = () => {
 							</div>
 							<div>
 								<h3 className="qualification__title">
-									Fullstack Engineer
+									Full Stack Engineer
 								</h3>
 								<span className="qualification__subtitle">
 									PT. Sarana Multigriya Finansial(Persero)
