@@ -27,14 +27,15 @@ export type ProjectItem = LearningProjectItem | ProfessionalProjectItem;
 
 export const projectsData: ProjectItem[] = [
 	{
-		id: 9,
-		image: "/assets/portf/img13.png",
-		title: "ElderCare",
+		id: 17,
+		image: "/assets/portf/zerobin.png",
+		title: "Zerobin",
 		category: "learning",
-		link: "https://spyralize-submission.vercel.app/",
-		tools: "ReactJS",
-		desc: "A web platform dedicated to supporting and raising awareness for elderly care and well-being.",
+		link: "https://cellar-six.vercel.app/",
+		tools: "NextJS",
+		desc: "A modern food-sharing platform to reduce food waste through community-driven donations.",
 	},
+
 	{
 		id: 1,
 		image: "/assets/portf/img12.png",
@@ -63,12 +64,13 @@ export const projectsData: ProjectItem[] = [
 		desc: "An online magazine platform for articles and digital media content.",
 	},
 	{
-		id: 8,
-		image: "/assets/portf/ollama.png",
-		title: "OrganAIze",
+		id: 9,
+		image: "/assets/portf/img13.png",
+		title: "ElderCare",
 		category: "learning",
-		tools: "NextJS, Ollama",
-		desc: "An AI-powered task organizer that helps manage activities intelligently.",
+		link: "https://spyralize-submission.vercel.app/",
+		tools: "ReactJS",
+		desc: "A web platform dedicated to supporting and raising awareness for elderly care and well-being.",
 	},
 	{
 		id: 3,
